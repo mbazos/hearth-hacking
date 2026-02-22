@@ -1,6 +1,6 @@
 # Hearth Hacking
 
-Turn a [Hearth Display](https://www.hearth.com/) into a fully usable Android tablet.
+Turn a [Hearth Display](https://hearthdisplay.com/) into a fully usable Android tablet.
 
 The Hearth Display runs Android 11 on a Rockchip rk3568 SoC but is locked down as a kiosk device. This project provides the tools and instructions to break out of the kiosk, install a launcher, browser, and gesture navigation, giving you a general-purpose tablet experience.
 

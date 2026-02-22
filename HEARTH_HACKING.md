@@ -162,13 +162,7 @@ adb -s <device-identifier> shell id
 # Should show: uid=0(root) gid=0(root) ...
 ```
 
-### 3. Uninstall Broken Firefox (if present)
-
-```bash
-adb -s <ip address>:<port> uninstall org.mozilla.firefox
-```
-
-### 4. Download Firefox APK (Version 143.0.4 - Tested & Working)
+### 3. Download Firefox APK (Version 143.0.4 - Tested & Working)
 
 **Recommended**: Firefox 143.0.4 has been tested and works well with Android 11 on this device.
 
@@ -192,7 +186,7 @@ curl -L -o /tmp/firefox-release.apk "https://github.com/mozilla-mobile/firefox-a
 curl -L -o /tmp/firefox-arm64.apk "https://download.mozilla.org/?product=fennec-latest&os=android&lang=multi"
 ```
 
-### 5. Install Firefox
+### 4. Install Firefox
 
 ```bash
 adb -s <ip address>:<port> install /tmp/firefox-143.0.4.apk
@@ -200,7 +194,7 @@ adb -s <ip address>:<port> install /tmp/firefox-143.0.4.apk
 
 **Note**: Installation may take 30-60 seconds due to APK size (~111MB).
 
-### 6. Disable Hearth Packages (Keeps Browser in Foreground)
+### 5. Disable Hearth Packages (Keeps Browser in Foreground)
 
 **IMPORTANT**: This step requires root access (Step 2). Without this, Hearth will reclaim the foreground. If you've already completed the [Full Tablet Mode Setup](#full-tablet-mode-setup), this step is already done.
 
@@ -215,13 +209,13 @@ Package com.hearth.hmf new state: disabled-user
 Package com.nativeapp new state: disabled-user
 ```
 
-### 7. Launch Firefox
+### 6. Launch Firefox
 
 ```bash
 adb -s <ip address>:<port> shell "am start -n org.mozilla.firefox/org.mozilla.fenix.HomeActivity"
 ```
 
-### 8. Install PullTab Fullscreen Extension (Optional - Hides Address Bar)
+### 7. Install PullTab Fullscreen Extension (Optional - Hides Address Bar)
 
 **Extension**: PullTab Fullscreen - hides the address bar to maximize screen space on mobile devices.
 
@@ -243,7 +237,7 @@ adb -s <ip address>:<port> push /tmp/pulltab_fullscreen-1.1.xpi /sdcard/Download
 
 **Verified Working**: This extension works perfectly with Firefox 143.0.4 to hide the address bar.
 
-### 9. Verify Firefox Is in Foreground
+### 8. Verify Firefox Is in Foreground
 
 Check that Firefox is running:
 ```bash
@@ -256,7 +250,7 @@ adb -s <ip address>:<port> shell dumpsys activity activities | grep "mResumedAct
 # Should show: mResumedActivity: ActivityRecord{...} org.mozilla.firefox/.App
 ```
 
-### 10. Re-enable Hearth (Optional)
+### 9. Re-enable Hearth (Optional)
 
 To restore Hearth, see [Restore Hearth Kiosk](#restore-hearth-kiosk).
 
