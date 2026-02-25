@@ -4,6 +4,9 @@ Turn a [Hearth Display](https://hearthdisplay.com/) into a fully usable Android 
 
 The Hearth Display runs Android 11 on a Rockchip rk3568 SoC but is locked down as a kiosk device. This project provides the tools and instructions to break out of the kiosk, install a launcher, browser, and gesture navigation, giving you a general-purpose tablet experience.
 
+# Discord Community
+I have no ownership over the discord but hwad over to the discord here for orher types of hacks being discussed [Hearth Hackers](https://discord.gg/KXea2AhU4)
+
 ## What Gets Installed
 
 | App | Purpose |
